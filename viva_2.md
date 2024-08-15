@@ -43,11 +43,11 @@ Deep within the Lost Kingdom of Cipherland, Sir Cipherus's final encrypted messa
 
 As you delve deeper into Cipherland, you encounter Sir Cipherus’s most complex cipher: the Vigenere cipher. This cipher uses a keyword to encrypt and decrypt messages, adding a layer of complexity to the challenge.
 
-1. **The Vigenere Cipher**: The encrypted message is hidden in a file named `encrypted_vignere.txt`, and you need to use the keyword "moon" to decode it.
+1. **The Vigenere Cipher**: The encrypted message is hidden in a file named [encrypted_vignere.txt](https://drive.google.com/file/d/1npU-F1kwovFXo8ymqKmRRZ-_uzb59Yv3/view?usp=share_link), and you need to find the keyword used to encrypt it.
 
    **Your Mission:**
    
-   - **Encrypt Using Vigenere**: Encrypt the original stripped message with the Vigenere cipher using the keyword "moon".
+   - **Encrypt Using Vigenere**: Encrypt the original stripped message with the Vigenere cipher using the keyword which you've to find.
    - **Decrypt and Confirm**: Decrypt the Vigenere-encrypted message and check if it matches the content in `encrypted_vignere.txt`.
    - **Discover the Keyword**: Use frequency analysis and rotation comparison to find the keyword length and the keyword itself. This involves determining the length of the keyword and then deriving the keyword from the encrypted text.
 
@@ -55,14 +55,14 @@ As you delve deeper into Cipherland, you encounter Sir Cipherus’s most complex
 
    ```python
    # Encrypt with Vigenere cipher
-   vigenere_encrypt("english_random.txt", "moon")
+   vigenere_encrypt("english_random.txt", {keyword})
    
    # Decrypt with Vigenere cipher
-   vigenere_decrypt("encrypted_vignere.txt", "moon")
+   vigenere_decrypt("encrypted_vignere.txt", {keyword})
    
    # Analyze and find keyword
-   print(rotate_compare("encrypted_vignere.txt", 4))
-   print(cryptanalyse_vigenere_afterlength("encrypted_vignere.txt", 4))
+   print(rotate_compare("encrypted_vignere.txt", {number of steps}))
+   print(cryptanalyse_vigenere_afterlength("encrypted_vignere.txt", {number of steps}))
    print(cryptanalyse_vigenere_findlength("encrypted_vignere.txt"))
    
    # Finalize the keyword and decrypt
